@@ -1,5 +1,8 @@
 package org.example;
 
+import crypto.assign1.Coins;
+import crypto.assign1.ExecuteTransaction;
+import crypto.assign1.Main;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -18,7 +21,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * Test class for the Main class functionalities.
+ * Test class for the crypto.assign1.Main class functionalities.
  */
 public class MainTest {
 
@@ -53,7 +56,7 @@ public class MainTest {
     }
 
     /**
-     * Test case to validate the parsing of CSV files in the Main class.
+     * Test case to validate the parsing of CSV files in the crypto.assign1.Main class.
      * This test ensures that the `parseCSV` method correctly reads and parses the content of a sample CSV file,
      * comparing the expected data with the actual parsed data, covering both coin and trader CSV files.
      *
@@ -61,7 +64,7 @@ public class MainTest {
      * @see Main#parseCSV(Path)
      */
     @Test
-    public void testParseCSV() throws IOException {
+     void testParseCSV() throws IOException {
         // check for coins.csv
         Path coinCsvPath = Path.of("src/test/resources/coins.csv");
         ArrayList<String[]> expectedCoins = new ArrayList<>();
@@ -101,7 +104,7 @@ public class MainTest {
     }
 
     /**
-     * Comprehensive test case for validating the concurrent execution of transactions in the Main class.
+     * Comprehensive test case for validating the concurrent execution of transactions in the crypto.assign1.Main class.
      * This test checks the concurrent execution of transactions using JSON files with transaction data.
      * It creates a CountDownLatch to synchronize the completion of transactions across multiple threads.
      * After initiating the transactions, the test waits for a specified time for all threads to finish
@@ -114,7 +117,7 @@ public class MainTest {
      * @see ExecuteTransaction
      */
     @Test
-    public void testConcurrentTransactions() {
+    void testConcurrentTransactions() {
         JsonNode transactionArray;
         int numberOfThreads = 3;
         CountDownLatch latch = new CountDownLatch(numberOfThreads);
@@ -139,7 +142,7 @@ public class MainTest {
     }
 
     /**
-     * Comprehensive test case for concurrent execution of transactions in the Main class.
+     * Comprehensive test case for concurrent execution of transactions in the crypto.assign1.Main class.
      * This test uses a different JSON file ("test_transaction_2.json") for concurrent execution,
      * creating a CountDownLatch for synchronization. After initiating the transactions,
      * the test waits for a specified time for all threads to finish using latch.await(),
@@ -152,7 +155,7 @@ public class MainTest {
      * @see ExecuteTransaction
      */
     @Test
-    public void testConcurrentTransactions1() {
+    void testConcurrentTransactions1() {
         JsonNode transactionArray;
         int numberOfThreads = 3;
         CountDownLatch latch = new CountDownLatch(numberOfThreads);
@@ -190,7 +193,7 @@ public class MainTest {
      * @see ExecuteTransaction
      */
     @Test
-    public void testConcurrentTransactionsMediumFile() {
+    void testConcurrentTransactionsMediumFile() {
         JsonNode transactionArray;
         int numberOfThreads = 12;
         CountDownLatch latch = new CountDownLatch(numberOfThreads);
@@ -226,7 +229,7 @@ public class MainTest {
      * @see ExecuteTransaction
      */
     @Test
-    public void testConcurrentTransactionsLargeFile() {
+     void testConcurrentTransactionsLargeFile() {
         JsonNode transactionArray;
         int numberOfThreads = 20;
         CountDownLatch latch = new CountDownLatch(numberOfThreads);
