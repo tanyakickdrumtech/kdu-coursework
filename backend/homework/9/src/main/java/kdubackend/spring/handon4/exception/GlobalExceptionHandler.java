@@ -16,12 +16,12 @@ public class GlobalExceptionHandler {
         ErrorDto error=new ErrorDto(ex.getMessage(),HttpStatus.INTERNAL_SERVER_ERROR);
         return new ResponseEntity<>(error,HttpStatus.INTERNAL_SERVER_ERROR);
     }
-    @ExceptionHandler(value={ResourceNotFoundException.class})
+    @ExceptionHandler(value={BadRequestException.class})
     public ResponseEntity<ErrorDto> badRequestException(BadRequestException ex){
         ErrorDto error=new ErrorDto("Bad Request Exception during runtime",HttpStatus.INTERNAL_SERVER_ERROR);
         return new ResponseEntity<>(error,HttpStatus.INTERNAL_SERVER_ERROR);
     }
-    @ExceptionHandler(value={ResourceNotFoundException.class})
+    @ExceptionHandler(value={Exception.class})
     public ResponseEntity<ErrorDto> exception(Exception ex){
         ErrorDto error=new ErrorDto(ex.getMessage(),HttpStatus.INTERNAL_SERVER_ERROR);
         return new ResponseEntity<>(error,HttpStatus.INTERNAL_SERVER_ERROR);
