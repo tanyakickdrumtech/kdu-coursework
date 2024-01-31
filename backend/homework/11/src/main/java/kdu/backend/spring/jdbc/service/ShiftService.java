@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
 import java.util.UUID;
 
 @Service
@@ -39,9 +40,10 @@ public class ShiftService {
      * @return
      * @throws MyCustomException
      */
-    public Shift getShift(UUID tenantId) throws MyCustomException {
+    public List<Shift> getShifts(UUID tenantId) throws MyCustomException {
         return shiftDao.getShiftById(tenantId);
     }
+
 }
 
 

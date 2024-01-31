@@ -1,12 +1,14 @@
 package kdu.backend.spring.jdbc.dao;
 
 import kdu.backend.spring.jdbc.exception.MyCustomException;
+import kdu.backend.spring.jdbc.mapper.ShiftMapper;
 import kdu.backend.spring.jdbc.model.Shift;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
 import java.util.UUID;
 @Repository
 public class ShiftDao {
@@ -49,12 +51,12 @@ public class ShiftDao {
      * @return
      * @throws MyCustomException
      */
-    public Shift getShiftById(UUID shiftId) throws MyCustomException {
-        String sql = "SELECT * FROM shifts WHERE id = ?";
+    public List<Shift> getShiftById(UUID shiftId) throws MyCustomException {
+        String sql = "SELECT * FROM shifts WHERE tenant_id = ?";
 
         try {
-            return jdbcTemplate.queryForObject(sql, new Object[]{shiftId}, new BeanPropertyRowMapper<>(Shift.class));
-        } catch (Exception e) {
+            return jdbcTemplate.query(sql, new Object[]{shiftId}, new ShiftMapper());        }
+        catch (Exception e) {
             throw new MyCustomException("Exception Occurs");
         }
     }

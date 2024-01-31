@@ -70,9 +70,9 @@ public class TenantController {
      * @throws MyCustomException
      */
     @GetMapping("/shifts/{tenantId}")
-    public ResponseEntity<Shift> getShift(@PathVariable UUID tenantId) throws MyCustomException {
-        Shift shift =  shiftService.getShift(tenantId);
-        log.info("shift entered");
+    public ResponseEntity<List<Shift>> getShift(@PathVariable UUID tenantId) throws MyCustomException {
+        List<Shift> shift =  shiftService.getShifts(tenantId);
+        //log.info("shift entered");
         return ResponseEntity.ok(shift);
     }
 
@@ -93,7 +93,7 @@ public class TenantController {
      * @param tenantId
      * @return
      */
-    @GetMapping("/users/{tenantId}")
+    @GetMapping("/usersByTenant/{tenantId}")
     public ResponseEntity<List<User>> getUser(@PathVariable UUID tenantId) {
         List<User> user = userService.getUsers(tenantId);
         return ResponseEntity.ok(user);

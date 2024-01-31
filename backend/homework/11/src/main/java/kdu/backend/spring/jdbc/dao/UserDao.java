@@ -8,6 +8,7 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import java.sql.Timestamp;
 import java.util.List;
 import java.util.UUID;
 
@@ -26,15 +27,8 @@ public class UserDao {
      * @param user
      */
     public void saveUser(User user) {
-        String sql = "INSERT INTO users (id, username, loggedIn, timeZone,tenant_id) VALUES (?, ?, ?, ?,?)";
-
-        jdbcTemplate.update(sql,
-                UUID.randomUUID(),
-                user.getUserName(),
-                user.getLoggedIn(),
-                user.getTimeZone(),
-                user.getTenantId()
-        );
+        String sql = "INSERT INTO users (id, username, loggedin, created_by, updated_by, time_zone, tenant_id) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        jdbcTemplate.update(sql, UUID.randomUUID(), user.getUserName(), user.getLoggedIn(), user.getCreatedBy(), user.getUpdatedBy(), user.getTimeZone(), user.getTenantId());
     }
 
     /**
@@ -44,7 +38,7 @@ public class UserDao {
      * @throws MyCustomException
      */
     public User getUserById(UUID userId) throws MyCustomException {
-        String sql = "SELECT * FROM users WHERE id = ?";
+        String sql = "SELECT * FROM users WHERE tenant_id = ?";
 
         try {
             return jdbcTemplate.queryForObject(sql, new Object[]{userId}, new BeanPropertyRowMapper<>(User.class));
