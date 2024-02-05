@@ -1,0 +1,144 @@
+<!-- Explore the following HTML tags
+1. Heading tags
+2. Anchor tags with different _target values
+3. Img tag
+4. Ordered List & Unordered List
+5. Forms - With fields like
+a. Text area
+b. Radio buttons (at least 2)
+c. Checkboxes (at least 2)
+d. Select (at least 2 options)
+e. Password
+f. Number
+g. Telephone
+h. Search
+i. Submit & Reset button
+6. HTML 5 tags - header, footer, aside, article, nav, section, main
+7. Paragraphs, pre, blockquote, code
+8. Italics, bold, superscript, underline, subscript, strikethrough
+9. Explore and use HTML comments
+-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>HTML HANDSON</title>
+	</head>
+	<body>
+		<header>
+            <!--different headings-->
+			<h1>Kickdrum</h1>
+			<h2>Value creation powered by technology.</h2>
+			<h3>Join our team of technology pioneers.</h3>
+		</header>
+		<nav>
+            <!--anchor tags with diffrent tags-->
+			<a href="https://www.kickdrum.com/private-equity" target="_blank"
+				>Services</a
+			>
+			<a href="https://www.kickdrum.com/case-studies" target="_self">Results</a>
+			<a href="https://www.kickdrum.com/team" target="_blank">Team</a>
+			<a href="https://www.kickdrum.com/resources" target="_self">Resources</a>
+			<a href="https://www.kickdrum.com/careers-open-positions" target="_blank"
+				>Careers</a
+			>
+			<a href="https://www.kickdrum.com/contact" target="_self">Contact</a>
+		</nav>
+		<aside>
+            <!--Image Tag-->
+			<img src="tech.avif" alt="technology" />
+		</aside>
+
+		<section>
+			<div>
+				<h2>We are technology pioneers with extensive real-world expertise.</h2>
+                <!--Ordered List-->
+				<ol>
+					<li>Private Equity Diligence</li>
+					<li>Strategy & Development</li>
+					<li>AWS Migration & Cost Optimization</li>
+				</ol>
+			</div>
+
+			<div>
+				<h2>We have a proven record of industry impact.</h2>
+                <!--Unordered List-->
+				<ul>
+					<li>AMN-HealthCare</li>
+					<li>Interlerad</li>
+					<li>Envison-HealthCare</li>
+				</ul>
+			</div>
+		</section>
+		<main>
+            <!--Use of forms woth fields like text area,radio,checkbox,select..etc-->
+			<form action="/submit" method="post">
+				<label for="textarea">Text Area:</label>
+				<textarea id="textarea" name="textarea"></textarea>
+
+				<label
+					><input type="radio" name="radioGroup" value="option1" /> Radio
+					1</label
+				>
+				<label
+					><input type="radio" name="radioGroup" value="option2" /> Radio
+					2</label
+				>
+
+				<label
+					><input type="checkbox" name="checkbox1" value="value1" /> Checkbox
+					1</label
+				>
+				<label
+					><input type="checkbox" name="checkbox2" value="value2" /> Checkbox
+					2</label
+				>
+
+				<label for="select">Select:</label>
+				<select id="select" name="select">
+					<option value="option1">Option 1</option>
+					<option value="option2">Option 2</option>
+				</select>
+
+				<label for="password">Password:</label>
+				<input type="password" id="password" name="password" />
+
+				<label for="number">Number:</label>
+				<input type="number" id="number" name="number" />
+
+				<label for="tel">Telephone:</label>
+				<input type="tel" id="tel" name="tel" />
+
+				<label for="search">Search:</label>
+				<input type="search" id="search" name="search" /> 
+				<input type="submit" value="Submit" />
+				<input type="reset" value="Reset" />
+			</form>
+		</main>
+		<!--Paragraphs,pre,blockquote,inline code-->
+		<p>
+			Leverage our design-driven development solutions to enhance your
+			enterprise value.
+		</p>
+		<pre>“Before Kickdrum, I don’t think I’ve ever been happy with any tech diligence project we’ve done.”</pre>
+		<blockquote>
+			We offer Executive Counsel as Chief Technology Officers to Senior
+			Leadership; supplying you best-in-class technology decision making for
+			strategic initiatives. We work with you to tackle the most valuable
+			technical challenges to growth with Engineering and Development blueprints
+			that deliver superior results.
+		</blockquote>
+		<code>This is inline code</code>
+
+		<!-- Text formatting in footer -->
+		<footer>
+			<p><em>Home</em></p>
+			<p><strong>Team</strong></p>
+			<p><sup>Careers</sup></p>
+			<p><sub>Contact</sub></p>
+			<p><u>Privacy</u></p>
+			<p><s>Private-Equity</s></p>
+		</footer>
+	</body>
+</html>
