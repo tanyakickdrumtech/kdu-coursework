@@ -1,0 +1,200 @@
+/* Reset some default styles */
+body,
+h1,
+h2,
+p,
+ul,
+li {
+	margin: 0;
+	padding: 0;
+}
+
+/* Basic styling for the page */
+body {
+	font-family: "Arial", sans-serif;
+}
+
+/* Header styling */
+header {
+	background-color: #070843;
+	color: white;
+	padding: 10px;
+}
+
+nav a:hover {
+	color: red;
+	text-decoration: underline;
+}
+
+nav ul li {
+	display: inline;
+	margin-right: 20px;
+	color: white;
+}
+
+/* tag selector*/
+
+a {
+	color: white;
+}
+
+/* ID-selector */
+#hero {
+	text-align: center;
+	padding: 50px;
+	background-color: #f0f0f0;
+}
+
+#hero h1 {
+	color: #333;
+}
+
+#hero p {
+	color: #555;
+}
+
+.cta-button {
+	display: inline-block;
+	padding: 10px 20px;
+	margin-top: 20px;
+	background-color: #333;
+	color: white;
+	text-decoration: none;
+}
+
+/* Services section styling */
+#services {
+	text-align: center;
+	padding: 50px;
+	background-color: #ddd;
+}
+
+#about {
+	text-align: center;
+	color: white;
+	padding: 50px;
+	background-color: #070843;
+}
+#text-part {
+	text-align: center;
+}
+.matter {
+	width: 35%;
+	text-align: center;
+	margin-left: 33%;
+	margin-top: 2%;
+	line-height: 25px;
+}
+#contact {
+	margin-top: 2%;
+}
+
+/* ID Selector */
+#hero {
+	background-color: #f0f0f0;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+/* Class Selector */
+.article {
+	border: 1px solid #ccc;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+/* Tag Selector */
+p {
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+/* Pseudo Selector */
+input:focus {
+	border-color: #007bff;
+	outline: none;
+}
+
+/* Pseudo Element */
+p::first-letter {
+	font-size: 150%;
+}
+
+/* Descendant Selector */
+header nav ul li a {
+	text-decoration: none;
+	color: white;
+}
+
+/* Child Selector */
+section > article {
+	margin-bottom: 20px;
+}
+
+/* Adjacent Sibling Selector */
+label + input {
+	margin-top: 10px;
+	display: block;
+}
+
+/* General Sibling Selector */
+label ~ input[type="checkbox"] {
+	margin-left: 10px;
+}
+
+/* CSS Box Model */
+/* Padding */
+input[type="text"],
+input[type="email"],
+textarea {
+	padding: 8px;
+}
+
+/* Border */
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+	border: 1px solid #ccc;
+}
+
+/* Margin */
+section {
+	margin-bottom: 30px;
+}
+/* Width */
+#hero {
+	width: 80%;
+	margin: auto;
+}
+
+/* Border-box */
+* {
+	box-sizing: border-box;
+}
+
+/* Content-box */
+.matter {
+	box-sizing: content-box;
+	width: 80%;
+	margin: auto;
+}
+
+/* Footer styling */
+footer {
+	background-color: #070843;
+	color: white;
+	text-align: center;
+	padding: 10px;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+/* Height */
+footer {
+	height: 50px;
+	background-color: #070843;
+	color: #fff;
+	text-align: center;
+	padding-top: 15px;
+}
