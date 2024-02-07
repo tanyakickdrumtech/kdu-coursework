@@ -1,0 +1,154 @@
+<!-- spring hands on to implement flex or grid -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Weather UI</title>
+	</head>
+	<body>
+		<section class="container_1">
+			<div style="font-size: 90px; color: black">New York, NY</div>
+			<div style="font-size: 30px">
+				Tuesday, April 15th <br />
+				Overcast
+			</div>
+		</section>
+		<section class="container_2">
+			<div style="display: flex; flex-direction: row">
+				<div class="sub_container_1">
+					<div class="text">
+						<img
+							src="/icons/icons/cloudy.png"
+							alt="cloud"
+							style="width: 160px"
+						/>
+						<span
+							style="
+								font-size: 70px;
+								align-items: flex-start;
+								margin-top: 7.5%;
+								margin-left: -2%;
+								color: black;
+							"
+							>58<sup>&deg;F</sup></span
+						>
+					</div>
+				</div>
+				<div style="margin-left: 37%">
+					<p style="font-size: 25px">
+						Precipitation:100%<br />
+						Humidity: 97%<br />
+						Wind: 4 mph SW <br />
+						Pollen Count: 36
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<div class="container_3">
+				<div class="display-icons">
+					<div>
+						<p style="margin-left: 0.5%">
+							<b>Today</b>
+						</p>
+						<img class="icons" src="/icons/icons/thunder.png" alt="thunder" />
+					</div>
+					<div class="degree">
+						<div class="value"><b>&nbsp;68&deg;&nbsp;&nbsp;</b></div>
+						<span>36&deg;</span>
+					</div>
+					<div class="pollen">Pollen &nbsp;&nbsp;36</div>
+				</div>
+				<div class="display-icons">
+					<div>
+						<p style="margin-left: -25%">
+							<b>Wednesday</b>
+						</p>
+						<img class="icons" src="/icons/icons/sunny.png" alt="sunny" />
+					</div>
+					<div class="degree">
+						<div class="value"><b>&nbsp;50&deg;&nbsp;&nbsp;</b></div>
+						<span>39&deg;</span>
+					</div>
+					<div class="pollen">Pollen &nbsp;&nbsp;36</div>
+				</div>
+				<div class="display-icons">
+					<div>
+						<p style="margin-left: 0.5%">
+							<b>Thursday</b>
+						</p>
+						<img class="icons" src="/icons/icons/sunny.png" alt="sunny" />
+					</div>
+					<div class="degree">
+						<div class="value"><b>&nbsp;55&deg;&nbsp;&nbsp;</b></div>
+						<span>39&deg;</span>
+					</div>
+					<div class="pollen">Pollen &nbsp;&nbsp;36</div>
+				</div>
+				<div class="display-icons">
+					<div>
+						<p style="margin-left: 0.5%">
+							<b>Friday</b>
+						</p>
+						<img
+							class="icons"
+							src="/icons/icons/partly cloudy.png"
+							alt="partly-cloudy"
+						/>
+					</div>
+					<div class="degree">
+						<div class="value"><b>&nbsp;54&deg;&nbsp;&nbsp;</b></div>
+						<span>43&deg;</span>
+					</div>
+					<div class="pollen">Pollen &nbsp;&nbsp;36</div>
+				</div>
+				<div class="display-icons">
+					<div>
+						<p style="margin-left: 0.5%">
+							<b>Saturday</b>
+						</p>
+						<img class="icons" src="/icons/icons/rain.png" alt="rain" />
+					</div>
+					<div class="degree">
+						<div class="value"><b>&nbsp;64&deg;&nbsp;&nbsp;</b></div>
+						<span>46&deg;</span>
+					</div>
+					<div class="pollen">Pollen &nbsp;&nbsp; 36</div>
+				</div>
+				<div class="display-icons">
+					<div>
+						<p style="margin-left: 0.5%">
+							<b>Sunday</b>
+						</p>
+						<img class="icons" src="/icons/icons/rain.png" alt="rain" />
+					</div>
+					<div class="degree">
+						<div id="value"><b>&nbsp;64&deg;&nbsp;&nbsp;</b></div>
+						<span>50&deg;</span>
+					</div>
+					<div class="pollen">Pollen &nbsp;&nbsp;36</div>
+				</div>
+				<div class="display-icons">
+					<div>
+						<p style="margin-left: 0.5%">
+							<b>Monday</b>
+						</p>
+						<img
+							class="icons"
+							src="/icons/icons/partly cloudy.png"
+							alt="partly-cloudy"
+						/>
+					</div>
+					<div class="degree">
+						<div class="value"><b>&nbsp;61&deg;&nbsp;&nbsp;</b></div>
+						<span>50&deg;</span>
+					</div>
+					<div class="pollen">Pollen &nbsp;&nbsp;36</div>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>
