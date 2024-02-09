@@ -1,0 +1,143 @@
+/* Resetting default styles */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+	background-color: #fba4a6;
+}
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+header {
+	background-color: #fba4a6;
+	color: #fff;
+	padding: 20px 0;
+}
+
+header h1 {
+	float: left;
+}
+
+nav {
+	float: right;
+}
+
+.nav-links {
+	display: flex;
+	flex-direction: row;
+	list-style-type: none;
+	// margin: 20;
+	// margin-bottom: 20%;
+}
+h3 {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-left: 12%;
+	margin-bottom: -2%;
+}
+
+.nav-links li {
+	display: inline-block;
+	margin-left: 20px;
+}
+
+.nav-links li a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.hamburger-menu {
+	display: none;
+	flex-direction: column;
+	cursor: pointer;
+	padding: 5px;
+}
+
+.line {
+	width: 25px;
+	height: 3px;
+	background-color: #fff;
+	margin: 4px 0;
+}
+#button-1 {
+	align-items: center;
+	background-color: #c15e71;
+	//border: 1px solid #dfdfdf;
+	border-radius: 5px;
+	// box-sizing: border-box;
+	color: white;
+	cursor: pointer;
+	display: flex;
+	font-family: Inter, sans-serif;
+	font-size: 18px;
+	justify-content: start;
+	line-height: 28px;
+	max-width: 30%;
+	padding: 14px 22px;
+	text-decoration: none;
+	transition: all 0.2s;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	width: 150%;
+	//margin-left: 2%;
+	margin-top: 5%;
+	padding: 1rem;
+}
+
+#button-1:active,
+#button-1:hover {
+	outline: 0;
+}
+
+#button-1:hover {
+	background-color: #ffffff;
+	border-color: none;
+}
+
+@media (min-width: 768px) {
+	.button-1 {
+		font-size: 20px;
+		min-width: 200px;
+
+		padding: 14px 16px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.nav-links {
+		display: none;
+		position: absolute;
+		background-color: #333;
+		width: 100%;
+		text-align: center;
+		top: 70px;
+	}
+
+	.nav-links li {
+		display: block;
+		margin: 10px 0;
+	}
+
+	.hamburger-menu {
+		display: flex;
+	}
+
+	.line {
+		transition: all 0.3s ease;
+	}
+}
+@media only screen and (max-width: 576) and (min-width: 0) {
+	.main-content {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+}
