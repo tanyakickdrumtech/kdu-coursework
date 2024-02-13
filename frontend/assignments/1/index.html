@@ -53,7 +53,7 @@
 				<div class="navigation-icon">
 					<img
 						style="width: 1.5rem; height: 1.5rem"
-						src="/images/gork.png"
+						src="images/grok.png"
 						alt="gork"
 					/>
 					<div class="navigation-text">Grok</div>
@@ -113,7 +113,7 @@
                         <i class="fi fi-rr-marker"></i>
                     </div>
                     <div style="padding-top: 1.6rem">
-                        <button class="tweet-btn">Post</button>
+                        <button class="tweet-btn" >Post</button>
                     </div>
                 </div>
                 
@@ -129,7 +129,7 @@
                             <div class="dot">.</div>
                             <div class="time">1s</div>
                             <div>
-                                <img id="more-icon" src="/images/more.png" alt="more" />
+                                <img id="more-icon" src="images/more.png" alt="more" />
                             </div>
                         </div>
                         <div class="post-tweet">
@@ -141,12 +141,12 @@
                         </div>
                         
                         <div class="post-images">
-                            <img id="comment-icon" src="/images/comment.png" alt="comment" />
-                            <img id="retweet-icon" src="/images/retweet.png" alt="retweet" />
-                            <img id="like-icon" src="/images/like.png" alt="like" />
-                            <img id="poll-icon" src="/images/poll.png" alt="poll" />
-                            <img id="bookmark-icon" src="/images/bookmark.png" alt="bookmark" />
-                            <img id="upload-icon" src="/images/upload.png" alt="upload" />
+                            <img id="comment-icon" src="images/comment.png" alt="comment" />
+                            <img id="retweet-icon" src="images/retweet.png" alt="retweet" />
+                            <img id="like-icon" src="images/like.png" alt="like" onclick="likeButton(this.id)" />
+                            <img id="poll-icon" src="images/poll.png" alt="poll" />
+                            <img id="bookmark-icon" src="images/bookmark.png" alt="bookmark" />
+                            <img id="upload-icon" src="images/upload.png" alt="upload" />
                         </div>
                     </div>
                     <div class="post-type-image">
@@ -159,24 +159,24 @@
                             <div class="dot">.</div>
                             <div class="time">25s</div>
                             <div>
-                                <img id="more-icon" src="/images/more.png" alt="more" />
+                                <img id="more-icon" src="images/more.png" alt="more" />
                             </div>
                         </div>
                         <div class="post-tweet-image">
                             <img
                             class="tweet-image"
-                            src="/images/image-tweet.png"
+                            src="images/image-tweet.png"
                             alt="post-tweet-image"
                             />
                         </div>
                         
                         <div class="post-images">
-                            <img id="comment-icon" src="/images/comment.png" alt="comment" />
-                            <img id="retweet-icon" src="/images/retweet.png" alt="retweet" />
-                            <img id="like-icon" src="/images/like.png" alt="like" />
-                            <img id="poll-icon" src="/images/poll.png" alt="poll" />
-                            <img id="bookmark-icon" src="/images/bookmark.png" alt="bookmark" />
-                            <img id="upload-icon" src="/images/upload.png" alt="upload" />
+                            <img id="comment-icon" src="images/comment.png" alt="comment" />
+                            <img id="retweet-icon" src="images/retweet.png" alt="retweet" />
+                            <img id="like-icon" src="images/like.png" alt="like"/>
+                            <img id="poll-icon" src="images/poll.png" alt="poll" />
+                            <img id="bookmark-icon" src="images/bookmark.png" alt="bookmark" />
+                            <img id="upload-icon" src="images/upload.png" alt="upload" />
                         </div>
                     </div>
                     
@@ -190,7 +190,7 @@
                             <div class="dot">.</div>
                             <div class="time">34s</div>
                             <div>
-                                <img id="more-icon" src="/images/more.png" alt="more" />
+                                <img id="more-icon" src="images/more.png" alt="more" />
                             </div>
                         </div>
                         <div class="post-tweet-video">
@@ -201,12 +201,12 @@
                         </div>
                         
                         <div class="post-images">
-                            <img id="comment-icon" src="/images/comment.png" alt="comment" />
-                            <img id="retweet-icon" src="/images/retweet.png" alt="retweet" />
-                            <img id="like-icon" src="/images/like.png" alt="like" />
-                            <img id="poll-icon" src="/images/poll.png" alt="poll" />
-                            <img id="bookmark-icon" src="/images/bookmark.png" alt="bookmark" />
-                            <img id="upload-icon" src="/images/upload.png" alt="upload" />
+                            <img id="comment-icon" src="images/comment.png" alt="comment" />
+                            <img id="retweet-icon" src="images/retweet.png" alt="retweet" />
+                            <img id="like-icon" src="images/like.png" alt="like" />
+                            <img id="poll-icon" src="images/poll.png" alt="poll" />
+                            <img id="bookmark-icon" src="images/bookmark.png" alt="bookmark" />
+                            <img id="upload-icon" src="images/upload.png" alt="upload" />
                         </div>
                     </div>
                 </div>
@@ -218,7 +218,7 @@
             <div id="nav-section">
 				<div class="profile-details">
 					<div class="profile-icon">
-						<img src="images/profile pic.png" alt="profile icon" />
+						<img id="profile-back" src="images/profile pic.png" alt="profile icon" onclick="navigateBack()"/>
 						<img src="images/+.png" alt="add" />
 					</div>
 					<div>
@@ -268,7 +268,7 @@
 				</div>
 				<div class="navigation-icon">
 					<img
-						src="/images/monetization.png"
+						src="images/monetization.png"
 						style="width: 1.5rem; height: 1.5rem"
 						alt="monetization"
 					/>
@@ -288,21 +288,21 @@
 
             <div class="tweet-box2" style="color: white">
                 <div style="display: flex; flex-direction: row; padding-bottom: 1rem;">
-                    <div style="font-size: 1.5rem;"><i class="fi fi-rr-arrow-small-left"></i></div>
+                    <div style="font-size: 1.5rem;"><i class="fi fi-rr-arrow-small-left" onclick="floatNavigation()"></i></div>
                     <div class="draft-text"><span>Drafts</span></div>
-                    <div style="padding-left: 2rem;"><button class="tweet-btn">Post</button></div>
+                    <div style="padding-left: 2rem;"><button class="tweet-btn" onclick="postSection()">Post</button></div>
                 </div>
                 <div class="text-icon-box">
                     <div class="profile-icon">
                         <img src="images/profile pic.png" alt="profile icon" />
                     </div>
-                    <div class="post-input">What is happening?!</div>
+                    <div class="post-input-wrapper"><input class="post-input"type="text" placeholder="what is happening?!"></div>
                 </div>
                 <div class="text-box">
                     <div>
                         <div class="earth-text">
                             <div class="tweet-box-text">
-                                <div><img style="width:1.4rem; height: 1.4rem;"  src="/images/earth.png" alt="earth"></div>
+                                <div><img style="width:1.4rem; height: 1.4rem;"  src="images/earth.png" alt="earth"></div>
                                 <div class="text-with-earth"><span>Everyone can reply</span></div>
                             </div>
                         </div>
@@ -331,7 +331,7 @@
                             <div class="dot">.</div>
                             <div class="time">34s</div>
                             <div>
-                                <img id="more-icon" src="/images/more.png" alt="more" />
+                                <img id="more-icon" src="images/more.png" alt="more" />
                             </div>
                         </div>
                         <div class="post-tweet">
@@ -344,16 +344,17 @@
                         </div>
                         
                         <div class="post-images">
-                            <img id="comment-icon" src="/images/comment.png" alt="comment" />
-                            <img id="retweet-icon" src="/images/retweet.png" alt="retweet" />
-                            <img id="like-icon" src="/images/like.png" alt="like" />
-                            <img id="poll-icon" src="/images/poll.png" alt="poll" />
-                            <img id="bookmark-icon" src="/images/bookmark.png" alt="bookmark" />
-                            <img id="upload-icon" src="/images/upload.png" alt="upload" />
+                            <img id="comment-icon" src="images/comment.png" alt="comment" />
+                            <img id="retweet-icon" src="images/retweet.png" alt="retweet" />
+                            <img id="like-icon" src="images/like.png" alt="like" />
+                            <img id="poll-icon" src="images/poll.png" alt="poll" />
+                            <img id="bookmark-icon" src="images/bookmark.png" alt="bookmark" />
+                            <img id="upload-icon" src="images/upload.png" alt="upload" />
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <script src="index.js"></script>
 	</body>
 </html>

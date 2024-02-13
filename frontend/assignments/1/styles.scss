@@ -181,7 +181,6 @@ body {
 		touch-action: manipulation;
 		vertical-align: top;
 		white-space: nowrap;
-		// padding-top: 2rem;
 	}
 
 	.profile-icon {
@@ -300,7 +299,6 @@ body {
 	}
 
 	.navigation-section2 {
-		//display: block;
 		padding-left: 1rem;
 		height: 100rem;
 		margin-top: -1.8rem;
@@ -365,9 +363,9 @@ body {
 	}
 	.tweet-box2 {
 		padding: 2rem;
-		width: 35rem;
+		width: 100%;
 		display: block;
-
+		box-sizing: border-box;
 		.text-box {
 			display: flex;
 			flex-direction: row;
@@ -381,13 +379,18 @@ body {
 			display: flex;
 			flex-direction: row;
 		}
-		.post-input {
+
+		.post-input-wrapper {
+			background-color: black;
 			color: #71767b;
-			font-size: 1.3rem;
+			font-size: 1.5rem;
 			padding-top: 0.5rem;
 			padding-left: 1rem;
-			.sticker {
-				padding-left: 5rem;
+			.post-input {
+				background-color: black;
+				border: none;
+				outline: none;
+				color: white;
 			}
 		}
 		.text-with-earth {
@@ -459,7 +462,8 @@ body {
 			}
 		}
 		.posts {
-			width: 50rem;
+			width: 100%;
+
 			padding-top: 2rem;
 			.post-header {
 				display: flex;
