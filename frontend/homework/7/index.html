@@ -24,12 +24,14 @@
 			</div>
 		</div>
 		<div id="messages"></div>
+		<!-- Socket.io library -->
 		<script
 			src="https://cdn.socket.io/4.7.4/socket.io.min.js"
 			integrity="sha384-Gr6Lu2Ajx28mzwyVR8CFkULdCU7kMlZ9UthllibdOSo6qAiN+yXNHqtgdTvFXMT4"
 			crossorigin="anonymous"
 		></script>
 		<script>
+			// Get elements from the DOM
 			const messageInput = document.getElementById("msgInput");
 			const sendButton = document.getElementById("sendMessage");
 			const messageOutput = document.getElementById("messages");
@@ -50,13 +52,9 @@
 
 			sendButton.addEventListener("click", () => {
 				const message = messageInput.value;
-				//send to particular message over sockets
 				socket.emit("message", message);
 				addMessage("Y", message);
 			});
-			// joinRoom.addEventListener("click", () => {
-			// 	socket.emit("");
-			// });
 			socket.on("new-message", (message) => {
 				addMessage("U", message);
 			});
