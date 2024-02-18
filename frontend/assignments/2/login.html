@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Login Page</title>
+		<link
+			rel="stylesheet"
+			href="https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn-uicons.flaticon.com/2.1.0/uicons-brands/css/uicons-brands.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn-uicons.flaticon.com/2.1.0/uicons-thin-rounded/css/uicons-thin-rounded.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-straight/css/uicons-regular-straight.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn-uicons.flaticon.com/2.1.0/uicons-solid-straight/css/uicons-solid-straight.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+		/>
+		<link rel="stylesheet" href="login.css" />
+	</head>
+
+	<body>
+		<div class="login-details">
+			<div class="login-header">
+				<div class="text">Login to</div>
+				<div class="logo"><i class="fi fi-brands-twitter-alt"></i></div>
+			</div>
+			<div class="login-input">
+				<div class="username-input">
+					<input
+						id="username"
+						class="user-input"
+						type="text"
+						placeholder="Username"
+					/>
+				</div>
+				<div class="password-input">
+					<input
+						id="password"
+						class="pass-input"
+						type="password"
+						placeholder="Password"
+					/>
+				</div>
+
+				<div class="login-button">
+					<button class="btn" onclick="openHomePage()">Log in</button>
+				</div>
+			</div>
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.4/socket.io.js"></script>
+
+		<script src="login.js"></script>
+	</body>
+</html>
