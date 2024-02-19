@@ -1,0 +1,14 @@
+.skills {
+	border: 1px solid gray;
+	color: green;
+	width: 50%;
+	background-color: rgb(134, 184, 213);
+	margin: 2rem;
+	list-style-type: none;
+	font-weight: 600;
+}
+
+.info-type-skill {
+	color: rgb(243, 91, 25);
+	text-align: center;
+}
