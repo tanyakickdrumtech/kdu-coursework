@@ -3,6 +3,7 @@ import "./App.scss";
 import "./Quote.scss";
 import { ApiQuote } from "./types/quotes.types";
 import { Quote } from "./Quote";
+import ClipLoader from "react-spinners/ClipLoader";
 
 /**
  * Main component of the application.
@@ -86,7 +87,11 @@ function App() {
 				onClick={onNewQuoteButtonClick}
 				disabled={isLoading}
 			>
-				{isLoading ? "Loading..." : "NEW QUOTE"}
+				{isLoading ? (
+					<ClipLoader color={"#ffffff"} loading={isLoading} size={35} />
+				) : (
+					"NEW QUOTE"
+				)}
 			</button>
 			<p className="filter-input">
 				Filters:{" "}
