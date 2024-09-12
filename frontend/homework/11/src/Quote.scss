@@ -1,0 +1,50 @@
+.container {
+	font-family: "Times New Roman", "Times New Roman", Times, serif;
+	align-items: center;
+	padding: 1.5rem;
+	margin: auto;
+	text-align: center;
+	border: 1px solid gray;
+	border-radius: 15px;
+	margin: auto;
+	margin-top: 1rem;
+	width: 40%;
+	height: fit-content;
+	background-color: #0c359e;
+	color: white;
+	font-size: 17px;
+	font-weight: 550;
+	.sub-content {
+		text-align: center;
+		.author {
+			margin-top: 1rem;
+			text-align: end;
+			font-weight: 550;
+			font-size: 15px;
+		}
+		.date {
+			text-align: end;
+			font-size: 12px;
+		}
+	}
+
+	.tag-container {
+		font-family: "Times New Roman", Times, serif;
+		text-align: start;
+		margin-top: 5rem;
+		.quote-tags {
+			border: 1px solid gray;
+			border-radius: 20px;
+			padding-left: 0.7rem;
+			padding-right: 0.7rem;
+			padding-top: 0.4rem;
+			padding-bottom: 0.4rem;
+			width: fit-content;
+			background-color: #ee99c2;
+			color: black;
+			font-weight: 600;
+			margin: 0.3rem;
+			// margin-top: 10rem;
+		}
+	}
+}

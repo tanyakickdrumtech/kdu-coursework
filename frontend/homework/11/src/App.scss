@@ -1,0 +1,36 @@
+.new-quote-btn {
+	margin-top: 0.5rem;
+	background-color: #ffe3ca;
+	color: #0c359e;
+	outline: none;
+	border: none;
+	width: 12%;
+	height: 60px;
+	font-weight: 600;
+	font-size: 18px;
+	margin-left: 25rem;
+	border-radius: 3px;
+}
+.filter-input {
+	margin: auto;
+	margin-left: 25rem;
+	margin-top: 1.5rem;
+}
+.line {
+	margin-top: 1.5rem;
+	margin-bottom: 2rem;
+	width: 44%;
+}
+.quote-tags-filter {
+	border: 1px solid gray;
+	border-radius: 20px;
+	padding-left: 0.7rem;
+	padding-right: 0.7rem;
+	padding-top: 0.4rem;
+	padding-bottom: 0.4rem;
+	width: fit-content;
+	background-color: #ee99c2;
+	color: black;
+	font-weight: 600;
+	margin: 0.3rem;
+}
