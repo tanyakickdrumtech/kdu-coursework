@@ -1,0 +1,48 @@
+package kdu.spring.entities;
+
+
+public class Vehicle {
+    private Speaker speaker;
+    private Tyre tyre;
+    private double price;
+
+    /**
+     * this is constructor
+     * @param speaker
+     * @param tyre
+     * @param price
+     */
+    public Vehicle(Speaker speaker, Tyre tyre, double price) {
+        this.speaker = speaker;
+        this.tyre = tyre;
+        this.price = calculateVehiclePrice(price);
+    }
+
+    public Speaker getSpeaker() {
+        return speaker;
+    }
+
+    public void setSpeaker(Speaker speaker) {
+        this.speaker = speaker;
+    }
+
+    public Tyre getTyre() {
+        return tyre;
+    }
+
+    public void setTyre(Tyre tyre) {
+        this.tyre = tyre;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+    public double calculateVehiclePrice(double price){
+
+        return tyre.getPrice()+ speaker.getPrice()+price;
+    }
+}
