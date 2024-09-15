@@ -1,0 +1,14 @@
+.hobbies {
+	border: 1px solid gray;
+	color: green;
+	width: 50%;
+	height: 65vh;
+	background-color: rgb(139, 215, 182);
+	margin: 2rem;
+	list-style-type: none;
+	font-weight: 600;
+}
+.info-type-hobby {
+	color: rgb(243, 91, 25);
+	text-align: center;
+}

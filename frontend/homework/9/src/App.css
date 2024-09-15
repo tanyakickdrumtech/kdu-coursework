@@ -1,0 +1,10 @@
+.details {
+	border: 1px solid gray;
+	width: 99%;
+	height: 98vh;
+	background-color: rgb(229, 206, 130);
+}
+.skills-hobbies {
+	display: flex;
+	flex-direction: row;
+}
