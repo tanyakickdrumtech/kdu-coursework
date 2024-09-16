@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Web socket implementation</title>
+	</head>
+	<body>
+		<div class="homepage">
+			<div class="header">
+				<h3>KDU CHAT APP</h3>
+			</div>
+
+			<div class="inputMessage">
+				<input
+					type="text"
+					id="msgInput"
+					placeholder="Write your message here"
+				/>
+				<button id="sendMessage">
+					<img class="sendImage" src="images/paper-plane-top.png" alt="send" />
+				</button>
+			</div>
+		</div>
+		<div id="messages"></div>
+		<!-- Socket.io library -->
+		<script
+			src="https://cdn.socket.io/4.7.4/socket.io.min.js"
+			integrity="sha384-Gr6Lu2Ajx28mzwyVR8CFkULdCU7kMlZ9UthllibdOSo6qAiN+yXNHqtgdTvFXMT4"
+			crossorigin="anonymous"
+		></script>
+		<script>
+			// Get elements from the DOM
+			const messageInput = document.getElementById("msgInput");
+			const sendButton = document.getElementById("sendMessage");
+			const messageOutput = document.getElementById("messages");
+
+			function addMessage(from, message) {
+				const element = document.createElement("div");
+				const fromClient = document.createElement("div");
+				fromClient.classList.add("from-client");
+				fromClient.innerText = from;
+				const msge = document.createElement("div");
+				msge.classList.add("text-message");
+				msge.innerText = message;
+				element.appendChild(fromClient);
+				element.appendChild(msge);
+				messageOutput.appendChild(element);
+			}
+			const socket = io("http://localhost:3000");
+
+			sendButton.addEventListener("click", () => {
+				const message = messageInput.value;
+				socket.emit("message", message);
+				addMessage("Y", message);
+			});
+			socket.on("new-message", (message) => {
+				addMessage("U", message);
+			});
+		</script>
+	</body>
+</html>
