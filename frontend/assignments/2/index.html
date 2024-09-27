@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Twitter</title>
+		<link
+			rel="stylesheet"
+			href="https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn-uicons.flaticon.com/2.1.0/uicons-brands/css/uicons-brands.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn-uicons.flaticon.com/2.1.0/uicons-thin-rounded/css/uicons-thin-rounded.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-straight/css/uicons-regular-straight.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn-uicons.flaticon.com/2.1.0/uicons-solid-straight/css/uicons-solid-straight.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+		/>
+
+
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<div class="homepage">
+			<div class="navigation-section">
+				<div class="logo"><i class="fi fi-brands-twitter-alt"></i></div>
+				<div class="navigation-icon">
+					<i class="fi fi-ss-house-chimney"></i>
+					<div class="navigation-text">Home</div>
+				</div>
+				<div class="navigation-icon">
+					<i class="fi fi-rr-search"></i>
+					<div class="navigation-text">Explore</div>
+				</div>
+				<div class="navigation-icon">
+					<i class="fi fi-rs-bell"></i>
+					<div class="navigation-text">Notifications</div>
+				</div>
+				<div class="navigation-icon" onclick="toggleMessagePage()">
+					<i class="fi fi-rr-envelope"></i>
+					<div class="navigation-text">Messages</div>
+				</div>
+				<div class="navigation-icon">
+					<img
+						style="width: 1.5rem; height: 1.5rem"
+						src="images/grok.png"
+						alt="gork"
+					/>
+					<div class="navigation-text">Grok</div>
+				</div>
+				<div class="navigation-icon">
+					<i class="fi fi-tr-ballot"></i>
+					<div class="navigation-text">Lists</div>
+				</div>
+				<div class="navigation-icon">
+					<i class="fi fi-rs-bookmark"></i>
+					<div class="navigation-text">Bookmarks</div>
+				</div>
+				<div class="navigation-icon">
+					<i class="fi fi-rr-users"></i>
+					<div class="navigation-text">Communities</div>
+				</div>
+				<div class="navigation-icon">
+					<i class="fi fi-brands-twitter-alt"></i>
+					<div class="navigation-text">Premium</div>
+				</div>
+				<div class="navigation-icon">
+					<i class="fi fi-rr-user"></i>
+					<div class="navigation-text">Profile</div>
+				</div>
+				<div class="navigation-icon">
+					<i class="fi fi-rr-circle-ellipsis"></i>
+					<div class="navigation-text">More</div>
+				</div>
+				<div><button class="navigation-button">Post</button></div>
+				<div class="profile-details">
+					<div class="profile-icon">
+						<img src="images/profile pic.png" alt="profile icon" />
+					</div>
+					<div>
+						<div class="user">Nitesh Gupta</div>
+						<div class="username">@nit_hck</div>
+					</div>
+					<div class="menu-dots">
+						<i class="fi fi-rr-menu-dots"></i>
+					</div>
+				</div>
+			</div>
+            <div class="tweet-box" style="color: white">
+                <div class="text-icon-box">
+                    <div class="profile-icon">
+                        <img src="images/profile pic.png" alt="profile icon" />
+                    </div>
+                    <div class="post-input-wrapper"><input id="new-post-input" class="post-input" style="background-color:black;border:none"type="text" placeholder="What's happening?"></div>
+                </div>
+                <div class="text-box">
+                    <div class="tweet-box-icon">
+                        <i class="fi fi-rr-picture"></i>
+                        <i class="fi fi-rs-gif-square"></i>
+                        <i class="fi fi-rr-people-poll"></i>
+                        <i class="fi fi-rr-smile"></i>
+                        <i class="fi fi-rr-calendar-clock"></i>
+                        <i class="fi fi-rr-marker"></i>
+                    </div>
+                    <div style="padding-top: 1.6rem">
+                        <button id="post-btn" class="tweet-btn" onclick="createPost()">Post</button>
+                    </div>
+                </div>
+                
+                
+                <div class="posts" id="posts-container">
+                    
+                </div>
+            </div>
+            <div class="message-page" style="display: none;">
+                <div class="chat-page">
+                    <div class="active-users">
+                        <h3 style="padding-left:3rem;">Messages</h3>
+                        <ul id="active-users-list"></ul>
+                    </div>
+                    <div style="padding-left: 12rem"class="chat-window">
+                        <div style="border-left:1px solid">
+                            <h3 >Sagun Sangwaan</h3>
+                            <hr style="width:300%">
+                            <div style="padding-top: 40rem" id="chat-messages"></div>
+                            <input  type="text" id="message-input">
+                            <button id="send-button">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+		<div class="navigation-section2">
+            <div id="nav-section">
+				<div class="profile-details">
+					<div class="profile-icon">
+						<img id="profile-back" src="images/profile pic.png" alt="profile icon" onclick="navigateBack()"/>
+						<img src="images/+.png" alt="add" />
+					</div>
+					<div>
+						<div class="user">Nitesh Gupta</div>
+						<div class="username">@nit_hck</div>
+					</div>
+
+					<div
+						style="
+							display: flex;
+							flex-direction: row;
+							padding-top: 1.3rem;
+							padding-bottom: 1.8rem;
+						"
+					>
+						<div style="color: white">
+							1<span style="color: #71767b; padding-left: 0.2rem"
+								>Following</span
+							>
+						</div>
+						<div style="color: white; padding-left: 1.25rem">
+							0<span style="color: #71767b; padding-left: 0.2rem"
+								>Followers</span
+							>
+						</div>
+					</div>
+				</div>
+				<div class="navigation-icon">
+					<i class="fi fi-rr-user"></i>
+					<div class="navigation-text">Profile</div>
+				</div>
+				<div class="navigation-icon">
+					<i class="fi fi-brands-twitter-alt"></i>
+					<div class="navigation-text">Premium</div>
+				</div>
+				<div class="navigation-icon">
+					<i class="fi fi-tr-ballot"></i>
+					<div class="navigation-text">Lists</div>
+				</div>
+				<div class="navigation-icon">
+					<i class="fi fi-rs-bookmark"></i>
+					<div class="navigation-text">Bookmarks</div>
+				</div>
+				<div class="navigation-icon">
+					<i class="fi fi-rr-users"></i>
+					<div class="navigation-text">Communities</div>
+				</div>
+				<div class="navigation-icon">
+					<img
+						src="images/monetization.png"
+						style="width: 1.5rem; height: 1.5rem"
+						alt="monetization"
+					/>
+					<div class="navigation-text">Monetization</div>
+				</div>
+				<div class="navigation-icon">
+					<i class="fi fi-rr-settings"></i>
+					<div class="navigation-text">Settings and Privacy</div>
+				</div>
+				<div class="navigation-icon">
+					<i class="fi fi-rr-sign-out-alt"></i>
+					<div class="navigation-text">Log out</div>
+				</div>
+			</div>
+		</div>
+        <div>
+
+            <div class="tweet-box2" style="color: white">
+                <div style="display: flex; flex-direction: row; padding-bottom: 1rem;">
+                    <div style="font-size: 1.5rem;"><i class="fi fi-rr-arrow-small-left" onclick="floatNavigation()"></i></div>
+                    <div class="draft-text"><span>Drafts</span></div>
+                    <div style="padding-left: 2rem;"><button class="tweet-btn" onclick="postSection()">Post</button></div>
+                </div>
+                <div class="text-icon-box">
+                    <div class="profile-icon">
+                        <img src="images/profile pic.png" alt="profile icon" />
+                    </div>
+                    <div class="post-input-wrapper"><input class="post-input"type="text" placeholder="what is happening?!"></div>
+                </div>
+                <div class="text-box">
+                    <div>
+                        <div class="earth-text">
+                            <div class="tweet-box-text">
+                                <div><img style="width:1.4rem; height: 1.4rem;"  src="images/earth.png" alt="earth"></div>
+                                <div class="text-with-earth"><span>Everyone can reply</span></div>
+                            </div>
+                        </div>
+                        <div><hr style="height:0.6px;border-width:0;color:gray;background-color:gray;width:150%;"></div>
+                        <div class="tweet-box-icon">
+                            <i class="fi fi-rr-picture"></i>
+                            <i class="fi fi-rs-gif-square"></i>
+                            <i class="fi fi-rr-people-poll"></i>
+                            <i class="fi fi-rr-smile"></i>
+                            <i class="fi fi-rr-calendar-clock"></i>
+                            <i class="fi fi-rr-marker"></i>
+                        </div>
+                    </div>
+                   
+                </div>
+                
+                
+                <div class="posts">
+                    <div class="post-text">
+                        <div class="post-header">
+                            <div class="profile-icon">
+                                <img src="images/profile pic.png" alt="profile icon" />
+                            </div>
+                            <div class="user">Nitesh Gupta</div>
+                            <div class="username">@nit_hck</div>
+                            <div class="dot">.</div>
+                            <div class="time">34s</div>
+                            <div>
+                                <img id="more-icon" src="images/more.png" alt="more" />
+                            </div>
+                        </div>
+                        <div class="post-tweet">
+                            Coffee in hand,bugs beware.Time to crush<br>
+                             some code.<span
+                            style="color: #0f91e8;"
+                            >#DeveloperLife 
+                            #Coding</span
+                            >
+                        </div>
+                        
+                        <div class="post-images">
+                            <img id="comment-icon" src="images/comment.png" alt="comment" />
+                            <img id="retweet-icon" src="images/retweet.png" alt="retweet" />
+                            <img id="like-icon" src="images/like.png" alt="like" />
+                            <img id="poll-icon" src="images/poll.png" alt="poll" />
+                            <img id="bookmark-icon" src="images/bookmark.png" alt="bookmark" />
+                            <img id="upload-icon" src="images/upload.png" alt="upload" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.socket.io/4.7.4/socket.io.min.js" integrity="sha384-Gr6Lu2Ajx28mzwyVR8CFkULdCU7kMlZ9UthllibdOSo6qAiN+yXNHqtgdTvFXMT4" crossorigin="anonymous"></script>
+
+        <script src="index.js"></script>
+        <script src="script.js"></script>
+	</body>
+</html>
